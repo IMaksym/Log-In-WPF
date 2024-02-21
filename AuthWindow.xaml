@@ -1,0 +1,33 @@
+﻿<Window x:Class="UserApp.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserApp"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Interface " Height="600" Width="1000">
+    <Grid>
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" 
+                Padding="30" MaxHeight="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40" Color="Black" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Auto" FontSize="40" HorizontalAlignment="Center" FontWeight="Bold"/>
+
+                <Grid Margin="0 0 0 20">
+
+                    <Button HorizontalAlignment="Left" Button.Height="70" Button.Width="300" Content="Registry" FontSize="40" Click="Button_Reg_Click"/>
+                    <Button HorizontalAlignment="Right" Button.Height="70" Button.Width="300" Content="LOG IN" FontSize="40" Style="{StaticResource MaterialDesignFlatButton}" Grid.Column="1" Margin="248,0,0,0"/>
+
+
+                </Grid>
+
+                <TextBox x:Name="TextBoxLogin" materialDesign:HintAssist.Hint="Login" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="PassBox" materialDesign:HintAssist.Hint="Password" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <Button Margin="0 30 0 20" Content="Sing up" FontSize="20" Width="500" Height="50" Click="Button_Auth_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
